@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -48,6 +49,7 @@ public class BFragment extends Fragment {
     @Subscribe
     public void onEvent(Integer count){
         resultTv.setText(String.valueOf(count));
+        Toast.makeText(getContext(), "传递数据成功", Toast.LENGTH_SHORT).show();
     }
 
     //初始化View

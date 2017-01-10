@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -39,7 +38,6 @@ public class AFragment extends Fragment {
                 count++;
                 //listener.update(count); //传递数据
                 EventBus.getDefault().post(Integer.valueOf(count));
-                Toast.makeText(getContext(), "传递数据成功", Toast.LENGTH_SHORT).show();
             }
         });
     }
